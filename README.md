@@ -7,9 +7,11 @@
 1.一键删除所有 console
 
    ![](http://assets.onlyadaydreamer.top/vscode-plugin-gifs/delete-all-console.gif)
+   
 2.一键删除所有注释
 
    ![](http://assets.onlyadaydreamer.top/vscode-plugin-gifs/delete-all-comment.gif)
+   
 3.选中文本一键插入 console, 支持不同场景
 
    ![](http://assets.onlyadaydreamer.top/vscode-plugin-gifs/insert-console.gif)
