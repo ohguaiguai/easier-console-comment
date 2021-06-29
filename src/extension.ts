@@ -34,7 +34,8 @@ function getAllLogStatements() {
 
   let logStatements = [];
   // 检测console的正则表达式
-  const logRegex = /console.(log|debug|info|warn|error|assert|dir|dirxml|trace|group|table|groupEnd|time|timeEnd|profile|profileEnd|count)\((.*)\);?/g;
+  const logRegex =
+    /console.(log|debug|info|warn|error|assert|dir|dirxml|trace|group|table|groupEnd|time|timeEnd|profile|profileEnd|count)\((.*)\);?/g;
   let match;
   // 正则循环匹配页面文本
   while ((match = logRegex.exec(documentText))) {
@@ -132,7 +133,7 @@ export function activate(context: vscode.ExtensionContext) {
   let removeComments = vscode.commands.registerCommand(
     'clearComment',
     function () {
-      const URLRegExp = /(((https?):\/\/)?([\w_-]+(?:(?:\.[\w_-]+)*))((\.[a-zA-Z—]+)+)([\w.,@?^=%&:/~+#-]*[\w@?^=%&\/~+#-]))|((kim:\/\/)[\w.,@?^=%&:/~+#-]+)/g;
+      // const URLRegExp = /(((https?):\/\/)?([\w_-]+(?:(?:\.[\w_-]+)*))((\.[a-zA-Z—]+)+)([\w.,@?^=%&:/~+#-]*[\w@?^=%&\/~+#-]))|((kim:\/\/)[\w.,@?^=%&:/~+#-]+)/g;
       const editor = vscode.window.activeTextEditor;
       if (!editor) {
         return;
@@ -142,7 +143,7 @@ export function activate(context: vscode.ExtensionContext) {
         // 正则匹配替换掉注释文本
         text = text
           .replace(
-            /((\/\*([\w\W]+?)\*\/)|([^:]\/\/(.(?!"\)))+)|(^\s*(?=\r?$)\n))/gm,
+            /((\/\*([\w\W]+?)\*\/)|([^:]?\/\/(.(?!"\)))+)|(^\s*(?=\r?$)\n))/gm,
             ''
           )
           .replace(/(^\s*(?=\r?$)\n)/gm, '')
