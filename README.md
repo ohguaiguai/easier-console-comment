@@ -1,6 +1,6 @@
 ## easier-console-comment ![](https://img.shields.io/badge/vscode%20plugin-0.1.6-brightgreen)
 
-> 一个 vscode 插件
+🖖 一个 vscode 插件
 
 ### 功能
 
